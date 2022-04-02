@@ -15,7 +15,7 @@ public class MainController {
     @Autowired
     private MessageRepo messageRepo;
 
-    @GetMapping("/")
+    @GetMapping("/main_set")
     public String greeting(Map<String, Object> model) {
         return "greeting";
     }
@@ -30,8 +30,8 @@ public class MainController {
     }
 
     @PostMapping("/main")
-    public String add(@RequestParam String text, @RequestParam String tag, Map<String, Object> model) {
-        Message message = new Message(text, tag);
+    public String add(@RequestParam String inputUser, @RequestParam String text, @RequestParam String tag, Map<String, Object> model, @RequestParam String outputUser) {
+        Message message = new Message(inputUser, text, tag, outputUser);
 
         messageRepo.save(message);
 

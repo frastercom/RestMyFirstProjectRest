@@ -1,6 +1,7 @@
 package com.example.restmyfirstproject.domain;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Set;
 
 @Entity
@@ -12,6 +13,9 @@ public class User {
     private String username;
     private String password;
     private boolean active;
+    private String firstname;
+    private String lastname;
+    private Timestamp birthday;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
@@ -57,4 +61,16 @@ public class User {
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+    public String getFirstname() {return firstname;}
+
+    public void setFirstname(String firstname) {this.firstname = firstname;}
+
+    public String getLastname() {return lastname;}
+
+    public void setLastname(String lastname) {this.lastname = lastname;}
+
+    public Timestamp getBirthday() {return birthday;}
+
+    public void setBirthday(Timestamp birthday) {this.birthday = birthday;}
 }

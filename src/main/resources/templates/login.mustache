@@ -1,13 +1,125 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Spring Security Example </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Новая социальная сеть</title>
+    <style>
+        * {box-sizing: border-box;}
+        body {
+            margin: 0;
+            background: #f2f2f2;
+        }
+        header {
+            background: white;
+            text-align: center;
+        }
+        header a {
+            display: block;
+            text-decoration: none;
+            outline: none;
+            transition: .3s ease-in-out;
+        }
+        .logo {
+            color: #D5B45B;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            padding: 20px 0;
+        }
+        nav {
+            display: table;
+            margin: 0 auto;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .topmenu:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .topmenu > li {
+            width: 25%;
+            float: left;
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .topmenu > li > a {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            color: #404040;
+            padding: 15px 30px;
+        }
+        .topmenu li a:hover {color: #D5B45B;}
+        .submenu-link:after {
+            content: "\f107";
+            font-family: "FontAwesome";
+            color: inherit;
+            margin-left: 10px;
+        }
+        .submenu {
+            background: #273037;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 5;
+            width: 180px;
+            opacity: 0;
+            transform: scaleY(0);
+            transform-origin :0 0;
+            transition: .5s ease-in-out;
+        }
+        .submenu a {
+            color: white;
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+        .submenu li:last-child a {border-bottom: none;}
+        .topmenu > li:hover .submenu {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    </style>
+    <script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+    <script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Первомайский_район_(Киров)","wgTitle":"Первомайский район (Киров)","wgCurRevisionId":91083315,"wgRevisionId":91083315,"wgArticleId":710819,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Википедия:Статьи с переопределением значения из Викиданных","ПРО:АТД:Последняя правка: в текущем году","Незавершённые статьи о Кировской области","Википедия:Страницы с картами","Административные единицы по алфавиту","Районы Кирова"],"wgBreakFrames":false,"wgPageContentLanguage":"ru","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"],"wgMonthNamesShort":["","янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек"],"wgRelevantPageName":"Первомайский_район_(Киров)","wgRelevantArticleId":710819,"wgRequestId":"XBrp4ApAADsAAF9E-tkAAADB","wgCSPNonce":false,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgFlaggedRevsParams":{"tags":{"accuracy":{"levels":3,"quality":2,"pristine":4}}},"wgStableRevisionId":91083315,"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikiEditorEnabledModules":[],"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"ru","pageLanguageDir":"ltr","pageVariantFallbacks":"ru","usePageImages":true,"usePageDescriptions":true},"wgMFExpandAllSectionsUserOption":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgWMESchemaEditAttemptStepOversample":false,"wgULSCurrentAutonym":"русский","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCoordinates":{"lat":58.61667,"lon":49.7},"wgWikibaseItemId":"Q4349420","wgScoreNoteLanguages":{"arabic":"العربية","catalan":"català","deutsch":"Deutsch","english":"English","espanol":"español","italiano":"italiano","nederlands":"Nederlands","norsk":"norsk","portugues":"português","suomi":"suomi","svenska":"svenska","vlaams":"West-Vlams"},"wgScoreDefaultNoteLanguage":"nederlands","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":true,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","ext.kartographer.style":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","ext.3d.styles":"ready","ext.flaggedRevs.basic":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@1cm6q67",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"ru"});
+    });mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+    });RLPAGEMODULES=["ext.cite.ux-enhancements","ext.kartographer.link","ext.scribunto.logs","site","mediawiki.page.startup","mediawiki.page.ready","jquery.tablesorter","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.collapserefs","ext.gadget.directLinkToCommons","ext.gadget.referenceTooltips","ext.gadget.logo","ext.gadget.edittop","ext.gadget.blpEditNotice","ext.gadget.wikibugs","ext.gadget.sidebarRelated","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.flaggedRevs.advanced","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+    <link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=ru&amp;modules=ext.3d.styles%7Cext.cite.styles%7Cext.flaggedRevs.basic%7Cext.kartographer.style%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+    <script async="" src="/w/load.php?debug=false&amp;lang=ru&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
 </head>
+
+<body>
+<header>
+    <a href="/home" class="logo">Новая социальная сеть</a>
+    <nav>
+        <ul class="topmenu">
+            <li><a href="/home">Главная</a></li>
+            <li><a href="/my_accaunt" class="submenu-link">Моя страница</a>
+                <ul class="submenu">
+                    <li><a href="/settings_accaunt">Настройки аккаунта</a></li>
+                    <li><a href="/chat">Чат</a></li>
+                </ul>
+            </li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/login">Войти</a></li>
+        </ul>
+    </nav>
+</header>
+<div>
+
+</div>
+</body>
+</html>
+
 <body>
 Login page
 <form action="/login" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><label> Имя пользователя : <input type="text" name="username"/> </label></div>
+    <div><label> Пароль: <input type="password" name="password"/> </label></div>
     <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
     <div><input type="submit" value="Sign In"/></div>
 </form>
