@@ -3,6 +3,7 @@ package com.example.restmyfirstproject.control;
 import com.example.restmyfirstproject.domain.BankAccaunt;
 import com.example.restmyfirstproject.domain.Clients;
 import com.example.restmyfirstproject.domain.Contacts;
+import com.example.restmyfirstproject.domain.Message;
 import com.example.restmyfirstproject.rep.ClientsRepo;
 import com.example.restmyfirstproject.sevirces.ClientsDao;
 import org.slf4j.Logger;
@@ -12,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -161,5 +164,25 @@ public class Controller {
     public void deleteContacts(@PathVariable("contactsId") Long id) {
         LOGGER.info("Удаление контакта");
         clientsDao.deleteContacts(id);
+    }
+
+    @GetMapping("/message")
+    public Message filterMessage(@RequestParam(value = "in_user", required = false) String in_name, @RequestParam(value = "out_user", required = false) String out_name) {
+        if (in_name != null && out_name != null) {
+            LOGGER.info("Поиск по имени");
+            return clientsDao.getMessage(in_name, out_name);
+        }
+        else {
+            LOGGER.info("Все сообщения");
+            return clientsDao.getAllMessage();
+        }
+    }
+
+    @PostMapping("/message")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Message createClients(@RequestBody Message message) {
+        LOGGER.info("Создание сообщения");
+        //message.setDate((Timestamp) new Date());
+        return clientsDao.createMessage(message);
     }
 }

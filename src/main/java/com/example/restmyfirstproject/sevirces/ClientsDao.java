@@ -3,6 +3,7 @@ package com.example.restmyfirstproject.sevirces;
 import com.example.restmyfirstproject.domain.BankAccaunt;
 import com.example.restmyfirstproject.domain.Clients;
 import com.example.restmyfirstproject.domain.Contacts;
+import com.example.restmyfirstproject.domain.Message;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -152,5 +153,26 @@ public class ClientsDao {
         if (contacts != null) {
             entityManager.remove(contacts);
         }
+    }
+
+    public Message getAllMessage() {
+        List<Message> resultList = entityManager.createQuery("from Message c order by c.id desc", Message.class).getResultList();
+        int i = resultList.size();
+        if (i>0)
+            return resultList.get(i-1);
+        else return null;
+    }
+
+    public Message getMessage(String in_name, String out_name) {
+        List<Message> resultList = entityManager.createQuery("select c from Message c WHERE c.in_user=:in and c.out_user=:out", Message.class).setParameter("in", in_name).setParameter("out", out_name).getResultList();
+        int i = resultList.size();
+        if (i>0)
+        return resultList.get(i-1);
+        else return null;
+    }
+
+    public Message createMessage(Message message) {
+        entityManager.persist(message);
+        return message;
     }
 }
